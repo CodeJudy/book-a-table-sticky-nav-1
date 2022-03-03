@@ -39,6 +39,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script type="text/javascript">
+
     window.addEventListener("scroll", function () {
       var header = document.querySelector("header");
       header.classList.toggle("sticky", window.scrollY > 0);
@@ -50,6 +51,30 @@
           btn.classList.toggle("fancy-btn")
           btn.classList.toggle("simple-btn")
         }
+      }
+    })
+
+
+    // window.addEventListener('scroll', function () {
+    //   var header = document.querySelector("header");
+    //   header.classList.toggle("sticky", window.scrollY > 0);
+
+    //   var nav = document.querySelector("nav");
+    //   var btns = nav.getElementsByClassName("fancy-btn")
+    //   for (const btn of btns) {
+
+    //     if (window.scrollY > 0) {
+    //       btn.classList.remove("fancy-btn");
+    //       btn.classList.add("simple-btn")
+
+    //     } else {
+    //       btn.classList.add("fancy-btn");
+    //       btn.classList.remove("simple-btn")
+    //     }
+    //   }
+    // });
+
+    
 
         // if (window.scrollY > 0) {
         //   if (btn.classList.contains('fancy-btn')) {
@@ -82,7 +107,7 @@
         // for (const btn of btns) {
         //   btn.classList.toggle("fancy-btn", window.scrollY > 0)
         // }
-      }
+
 
       // var nav = document.querySelector("nav");
       // var btns = nav.getElementsByClassName("fancy-btn")
@@ -104,7 +129,7 @@
       // var fancybtns = document.querySelectorAll(".fancy-btn");
       // // if (fancybtns.classList.contains("fancy-btn"))
       // fancybtns.classList.toggle("fancy-btn", window.scrollY > 0)
-    })
+
   </script>
 </body>
 
