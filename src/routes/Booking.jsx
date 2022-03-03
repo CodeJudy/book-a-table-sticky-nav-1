@@ -31,17 +31,17 @@ const Booking = () => {
         <div id='booking'>
             {showSubmit ?
 
-                <div>
-                    <div id='confirm'>
-                        <h4>Your booking is confirmed as below:</h4>
-                        <p>Contact: <br /> {email}</p>
-                        <p>Date: {date}</p>
-                        <p>Time: {time}</p>
-                        <p>Guests: {seats}</p>
-                        <Link className='fancy-btn' to="/">Confirm</Link>
-                        <button className='fancy-btn' onClick={() => setShowSubmit(false)}>Go back</button>
-                    </div>
+
+                <div id='confirm'>
+                    <h4>Your booking is confirmed as below:</h4>
+                    <p>Contact: <br /> {email}</p>
+                    <p>Date: {date}</p>
+                    <p>Time: {time}</p>
+                    <p>Guests: {seats}</p>
+                    <Link className='fancy-btn' to="/">Confirm</Link>
+                    <button className='fancy-btn' onClick={() => setShowSubmit(false)}>Go back</button>
                 </div>
+
 
                 :
 
