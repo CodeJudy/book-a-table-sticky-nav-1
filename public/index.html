@@ -47,9 +47,19 @@
       var btns = nav.getElementsByClassName("fancy-btn")
       for (const btn of btns) {
         if (window.scrollY > 0) {
-          btn.classList.remove("fancy-btn")
-          btn.classList.add("simple-btn")
+          btn.classList.toggle("fancy-btn")
+          btn.classList.toggle("simple-btn")
         }
+
+        // if (window.scrollY > 0) {
+        //   if (btn.classList.contains('fancy-btn')) {
+        //     btn.classList.replace("fancy-btn", "simple-btn")
+        //   } else {
+        //     btn.classList.replace("simple-btn", "fancy-btn")
+
+        //   }
+        // }
+
         //     // } else {
         //     //   btn.classList.add("fancy-btn")
         //   }
