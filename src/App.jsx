@@ -8,7 +8,6 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Menu from './routes/Menu';
 import Booking from './routes/Booking';
-import data from './data';
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="menu" element={<Menu data={data} />}></Route>
+          <Route path="menu" element={<Menu />}></Route>
           <Route path="booking" element={<Booking />}></Route>
         </Routes>
       </main>
