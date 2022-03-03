@@ -93,6 +93,28 @@ nav {
   height: calc(100% + 15px); 
 }
 
+.simple-btn {
+  
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 40px;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+
+  margin: 20px auto;
+  transition: color 0.4s;
+  bottom: 0;
+}
+.simple-btn:hover,
+.simple-btn:active {
+  background-color: #467745;
+}
+
 /* Home */
 
 #landing-page {

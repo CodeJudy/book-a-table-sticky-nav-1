@@ -47,10 +47,27 @@
       var btns = nav.getElementsByClassName("fancy-btn")
       for (const btn of btns) {
         if (window.scrollY > 0) {
-          btn.classList.toggle("fancy-btn")
-          // } else {
-          //   btn.classList.add("fancy-btn")
+          btn.classList.remove("fancy-btn")
+          btn.classList.add("simple-btn")
         }
+        //     // } else {
+        //     //   btn.classList.add("fancy-btn")
+        //   }
+
+        // for (const btn of btns) {
+
+        //   btn.classList.toggle("fancy-btn", window.scrollY > 0)
+        //   btn.classList.toggle("simple-btn", window.scrollY > 0)
+
+        // } else {
+        //   btn.classList.add("fancy-btn")
+
+
+        // if (window.scrollY <= 0) {
+        //   btn.classList.add("fancy-btn")
+        //   btn.classList.remove("simple-btn")
+
+        // }
 
         // for (const btn of btns) {
         //   btn.classList.toggle("fancy-btn", window.scrollY > 0)
