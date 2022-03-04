@@ -7,30 +7,66 @@
   padding: 0;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 /* header */
 
 header {
   position: fixed;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
 }
 
-header.sticky {
-  background: red;
-}
+header.sticky-header {
+  display: flex;
+  flex-direction: column;
 
-#logo{
-  /* width: 200px; */
-  width: 30%;
-  padding: 10px 30px;
+  position: relative;
+  
+  transition: 0.6s;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   width: 70%;
+}
+
+.sticky-nav {
+  background: red;
+  width: 100%;
+  transition: 0.6s;
+
+  position: fixed;
+  top: 0;
+
+	/* position: -webkit-sticky;
+  position: sticky;
+  top: 0; */
+}
+
+#logo{
+  /* width: 200px; */
+  width: 30%;
+  padding: 10px 30px;
+  transition: 0.6s;
+}
+
+#logo-down {
+  position: absolute;
+  top: 35vh; 
+  
+  /* width: 30%;  */
+  width: 260px;
+  padding: 20px 0 20px 0; 
+  transition: 0.6s;
+  z-index: 999;
+  display: block;
 }
 
 /* nav a {
@@ -94,10 +130,9 @@ nav {
 }
 
 .simple-btn {
-  
   display: inline-block;
   position: relative;
-  padding: 10px 20px;
+  padding: 3px 15px;
   color: white;
   font-family: 'Dancing Script', cursive;
   font-style: italic;
@@ -106,13 +141,14 @@ nav {
   text-decoration: none;
   letter-spacing: 0.2rem;
 
-  margin: 20px auto;
+  margin: 1px auto;
   transition: color 0.4s;
   bottom: 0;
 }
 .simple-btn:hover,
 .simple-btn:active {
-  background-color: #467745;
+  outline: 4px solid white;
+  transition: 0.8s;
 }
 
 /* Home */
@@ -257,6 +293,22 @@ form .fancy-btn,
   background-size: cover;
   background-attachment: fixed;
   color:wheat;
+  transition: 0.6s;
+}
+#sticky-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  padding-top: 50vh;
+  min-height: 100vh;
+  background-image: url("../public/img_background/bacgroundmenu.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color:wheat;
+  transition: 0.6s;
 }
 
 /* .pizzas {
@@ -346,11 +398,15 @@ form .fancy-btn,
   } 
  
   .fancy-btn {
-    font-size: 28px;
+    font-size: 20px;
     margin: 10px auto 10px auto;
   }
+  .simple-btn {
+    font-size: 20px;
+  }
+
   #logo {
-    min-width: 260px;
+    width: 260px;
     position: absolute;
     top: 70px;
     /* margin-top: 60px; */
@@ -373,7 +429,10 @@ form .fancy-btn,
 
 @media (max-width: 400px) {
   .fancy-btn {
-    font-size: 12px;
+    font-size: 15px;
     margin: 10px auto 10px auto;
+  }
+  .simple-btn{
+    font-size: 15px;
   }
 }

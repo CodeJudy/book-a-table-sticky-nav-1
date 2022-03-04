@@ -39,22 +39,79 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script type="text/javascript">
-
+//Kísérletek a logo id-ra
     window.addEventListener("scroll", function () {
       var header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 0);
+      header.classList.toggle("sticky-header", window.scrollY > 0);
 
+      var nav = document.querySelector("nav") 
+      nav.classList.toggle("sticky-nav", window.scrollY > 0);
+
+      if(window.scrollY>0){
+        document.querySelector("section").id='sticky-menu'
+      } else {
+        document.querySelector("section").id='menu'
+      }
+
+      if(window.scrollY>0){
+        document.querySelector("header").querySelector("img").id='logo-down'
+      } else {
+        document.querySelector("header").querySelector("img").id='logo'
+      }
+      
       var nav = document.querySelector("nav");
-      var btns = nav.getElementsByClassName("fancy-btn")
+      var btns = nav.getElementsByTagName("a")
       for (const btn of btns) {
         if (window.scrollY > 0) {
-          btn.classList.toggle("fancy-btn")
-          btn.classList.toggle("simple-btn")
+          btn.classList.remove("fancy-btn")
+          btn.classList.add("simple-btn")
+        }  else {
+          btn.classList.add("fancy-btn")
+          btn.classList.remove("simple-btn")
         }
       }
     })
 
 
+
+    //Ez jól működött a header-re és a nav-ban levő a-kra
+    // window.addEventListener("scroll", function () {
+    //   var header = document.querySelector("header");
+    //   header.classList.toggle("sticky", window.scrollY > 0);
+
+
+    //   var nav = document.querySelector("nav");
+    //   var btns = nav.getElementsByTagName("a")
+    //   for (const btn of btns) {
+    //     if (window.scrollY > 0) {
+    //       btn.classList.remove("fancy-btn")
+    //       btn.classList.add("simple-btn")
+    //     }  else {
+    //       btn.classList.add("fancy-btn")
+    //       btn.classList.remove("simple-btn")
+    //     }
+    //   }
+    // })
+
+
+
+// Nem kapja vissza a fancy-btn-t felfelé gödítésnél
+    // window.addEventListener("scroll", function () {
+    //   var header = document.querySelector("header");
+    //   header.classList.toggle("sticky", window.scrollY > 0);
+
+    //   var nav = document.querySelector("nav");
+    //   var btns = nav.getElementsByClassName("fancy-btn")
+    //   for (const btn of btns) {
+    //     if (window.scrollY > 0) {
+    //       btn.classList.toggle("fancy-btn")
+    //       btn.classList.toggle("simple-btn")
+    //     }
+    //   }
+    // })
+
+
+    // Nem kapja vissza a fancy-btn-t felfelé gödítésnél
     // window.addEventListener('scroll', function () {
     //   var header = document.querySelector("header");
     //   header.classList.toggle("sticky", window.scrollY > 0);

@@ -4,7 +4,7 @@ import data from '../data'
 const Menu = () => {
 
     return (
-        <div id='menu'>
+        <section id='menu'>
             <div className='pizzas'>
                 {data.pizzas.map(pizza =>
                     <div key={pizza.name} className='pizza'>
@@ -24,7 +24,7 @@ const Menu = () => {
                 )}
             </div>
 
-        </div>
+        </section>
     )
 }
 
