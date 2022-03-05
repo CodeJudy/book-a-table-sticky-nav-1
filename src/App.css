@@ -386,7 +386,7 @@ form .fancy-btn,
     justify-content: center;
   }
    nav {
-   position: fixed; 
+    position: fixed; 
     top: 0; 
     left: 0;
     width: 100%;
