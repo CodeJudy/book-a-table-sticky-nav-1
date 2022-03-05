@@ -386,7 +386,6 @@ form .fancy-btn,
     justify-content: center;
   }
    nav {
-   
    position: fixed; 
     top: 0; 
     left: 0;
@@ -411,6 +410,14 @@ form .fancy-btn,
     top: 70px;
     /* margin-top: 60px; */
     /* padding: 10px 30px; */
+  }
+  #logo-down {
+    width: 260px;
+    position: absolute;
+    top: 70px;
+  }
+  #sticky-menu {
+    padding-top: 150px;
   }
   #confirm {
     /* max-width: 300px; */
